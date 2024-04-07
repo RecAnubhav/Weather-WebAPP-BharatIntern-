@@ -7,6 +7,7 @@ const humidity = document.getElementById('humidity');
 const wind_speed = document.getElementById('wind-speed');
 const location_not_found= document.querySelector('.location-not-found');
 const weather_body= document.querySelector('.weather-body');
+const city_name= document.querySelector('.city-name');
 
 
 async function checkWeather(city) {
@@ -22,7 +23,7 @@ if(weather_data.cod===`404`){
   return;
 }
 
-
+  city_name.innerHTML=`${city}`;
   temperature.innerHTML=`${Math.round(weather_data.main.temp -273.15 )}°C`;
   description.innerHTML=`${ weather_data.weather[0].description}`;
   
