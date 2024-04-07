@@ -130,3 +130,7 @@ width: 80%;
   color: grey;
   margin-block-end: 15px;
 }
+.city-name{
+ text-transform: capitalize;
+ font-size:28px;
+}
